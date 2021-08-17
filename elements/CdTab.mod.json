@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Crystal Dimension",
+    "icon": {
+      "value": "CUSTOM:LightGrass"
+    },
+    "showSearch": false
+  }
+}

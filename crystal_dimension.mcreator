@@ -1,0 +1,84 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "LightGrass",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_grass"
+    },
+    {
+      "name": "CdTab",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cd_tab"
+    },
+    {
+      "name": "LightParticle",
+      "type": "particle",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_particle"
+    },
+    {
+      "name": "LightForest",
+      "type": "biome",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_forest"
+    },
+    {
+      "name": "CrystalBeast",
+      "type": "mob",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_beast"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.crystal_dimension.crystal_beast_spawn_egg": "Crystal Beast Spawn Egg",
+      "itemGroup.tabcd_tab": "Crystal Dimension",
+      "block.crystal_dimension.light_grass": "Light Grass",
+      "biome.crystal_dimension.light_forest": "Light Forest",
+      "entity.crystal_dimension.crystal_beast": "Crystal Beast"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "crystal_dimension",
+    "modName": "Crystal Dimension",
+    "version": "1.0.0",
+    "author": "Andus",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "pl.blackstone.crystaldimension",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}

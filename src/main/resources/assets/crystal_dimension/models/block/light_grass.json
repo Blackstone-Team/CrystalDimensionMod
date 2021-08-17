@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "crystal_dimension:blocks/l_grass_down",
+    "up": "crystal_dimension:blocks/l_grass_top",
+    "north": "crystal_dimension:blocks/l_grass_side",
+    "east": "crystal_dimension:blocks/l_grass_side",
+    "south": "crystal_dimension:blocks/l_grass_side",
+    "west": "crystal_dimension:blocks/l_grass_side",
+    "particle": "crystal_dimension:blocks/l_grass_down"
+  }
+}
