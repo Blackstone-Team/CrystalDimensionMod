@@ -1,6 +1,7 @@
 
 package pl.blackstone.crystaldimension.entity;
 
+import pl.blackstone.crystaldimension.itemgroup.CdTabItemGroup;
 import pl.blackstone.crystaldimension.entity.renderer.CrystalBeastRenderer;
 import pl.blackstone.crystaldimension.CrystalDimensionModElements;
 
@@ -17,7 +18,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -46,7 +46,7 @@ public class CrystalBeastEntity extends CrystalDimensionModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16750849, -16737844, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -16750849, -16737844, new Item.Properties().group(CdTabItemGroup.tab))
 				.setRegistryName("crystal_beast_spawn_egg"));
 	}
 
