@@ -1,0 +1,22 @@
+{
+  "group": "crystal_dimension",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "crystal_dimension:crystal_shards"
+    },
+    "1": {
+      "item": "crystal_dimension:crystal_shards"
+    },
+    "2": {
+      "item": "crystal_dimension:crystal_shards"
+    }
+  },
+  "result": {
+    "item": "crystal_dimension:long_crystal_shard",
+    "count": 1
+  }
+}

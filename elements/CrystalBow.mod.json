@@ -1,0 +1,40 @@
+{
+  "_fv": 18,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "crystal_bow",
+    "customModelName": "Normal",
+    "name": "Crystal Bow",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CdTab"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:LongCrystalShard"
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 2.0,
+    "bulletKnockback": 1,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:LongCrystalShard"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsPlayer": {
+      "name": "CrystalBowBulletHitsPlayer"
+    }
+  }
+}

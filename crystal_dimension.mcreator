@@ -45,14 +45,195 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "crystal_beast"
+    },
+    {
+      "name": "CrystalShards",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_shards"
+    },
+    {
+      "name": "CrystalBlock",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_block"
+    },
+    {
+      "name": "Crystal",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal"
+    },
+    {
+      "name": "IronString",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_string"
+    },
+    {
+      "name": "IronStringRecipe",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_string_recipe"
+    },
+    {
+      "name": "LongCrystalShard",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "long_crystal_shard"
+    },
+    {
+      "name": "LongCrystalShardRecipe",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "long_crystal_shard_recipe"
+    },
+    {
+      "name": "CrystalBowBulletHitsPlayer",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_bow_bullet_hits_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrystalBow",
+      "type": "gun",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_bow"
+    },
+    {
+      "name": "CrystalLog",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_log"
+    },
+    {
+      "name": "Berry",
+      "type": "food",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "berry"
+    },
+    {
+      "name": "CrystalBerryFoodEaten",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_berry_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrystalBerry",
+      "type": "food",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_berry"
+    },
+    {
+      "name": "CrystalLeavesBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_leaves_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrystalLeaves",
+      "type": "block",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_leaves"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.crystal_dimension.crystal_leaves": "Crystal Leaves",
       "item.crystal_dimension.crystal_beast_spawn_egg": "Crystal Beast Spawn Egg",
+      "item.crystal_dimension.iron_string": "Iron String",
+      "item.crystal_dimension.crystal_shards": "Crystal Shards",
+      "item.crystal_dimension.long_crystal_shard": "Long Crystal Shard",
+      "item.crystal_dimension.crystal_bow": "Crystal Bow",
+      "item.crystal_dimension.crystal_berry": "Crystal Berry",
+      "block.crystal_dimension.crystal": "Crystal",
+      "block.crystal_dimension.crystal_block": "Crystal Block",
+      "item.crystal_dimension.berry": "Berry",
       "itemGroup.tabcd_tab": "Crystal Dimension",
+      "block.crystal_dimension.crystal_log": "Crystal Log",
       "block.crystal_dimension.light_grass": "Light Grass",
       "biome.crystal_dimension.light_forest": "Light Forest",
       "entity.crystal_dimension.crystal_beast": "Crystal Beast"

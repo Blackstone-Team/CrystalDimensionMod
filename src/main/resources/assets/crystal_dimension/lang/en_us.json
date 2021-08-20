@@ -1,6 +1,16 @@
 {
+  "block.crystal_dimension.crystal_leaves": "Crystal Leaves",
   "item.crystal_dimension.crystal_beast_spawn_egg": "Crystal Beast Spawn Egg",
+  "item.crystal_dimension.iron_string": "Iron String",
+  "item.crystal_dimension.crystal_shards": "Crystal Shards",
+  "item.crystal_dimension.long_crystal_shard": "Long Crystal Shard",
+  "item.crystal_dimension.crystal_bow": "Crystal Bow",
+  "item.crystal_dimension.crystal_berry": "Crystal Berry",
+  "block.crystal_dimension.crystal": "Crystal",
+  "block.crystal_dimension.crystal_block": "Crystal Block",
+  "item.crystal_dimension.berry": "Berry",
   "itemGroup.tabcd_tab": "Crystal Dimension",
+  "block.crystal_dimension.crystal_log": "Crystal Log",
   "block.crystal_dimension.light_grass": "Light Grass",
   "biome.crystal_dimension.light_forest": "Light Forest",
   "entity.crystal_dimension.crystal_beast": "Crystal Beast"

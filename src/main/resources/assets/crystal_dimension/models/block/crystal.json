@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "crystal_dimension:blocks/crystal_b",
+    "particle": "crystal_dimension:blocks/crystal_b"
+  }
+}
