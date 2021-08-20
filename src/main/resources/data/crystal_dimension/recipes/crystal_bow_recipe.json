@@ -1,0 +1,36 @@
+{
+  "group": "crystal_dimension",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    "345",
+    " 78"
+  ],
+  "key": {
+    "1": {
+      "item": "crystal_dimension:crystal_shards"
+    },
+    "2": {
+      "item": "crystal_dimension:iron_string"
+    },
+    "3": {
+      "item": "crystal_dimension:crystal_shards"
+    },
+    "4": {
+      "item": "minecraft:bow"
+    },
+    "5": {
+      "item": "crystal_dimension:iron_string"
+    },
+    "7": {
+      "item": "crystal_dimension:crystal_shards"
+    },
+    "8": {
+      "item": "crystal_dimension:iron_string"
+    }
+  },
+  "result": {
+    "item": "crystal_dimension:crystal_bow",
+    "count": 1
+  }
+}

@@ -2,14 +2,14 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "crystal_fruit_leaves",
-    "textureTop": "crystal_leaves",
-    "textureLeft": "crystal_fruit_leaves",
-    "textureFront": "crystal_fruit_leaves",
-    "textureRight": "crystal_fruit_leaves",
-    "textureBack": "crystal_fruit_leaves",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "texture": "ccb_down",
+    "textureTop": "ccb_top",
+    "textureLeft": "ccb_side",
+    "textureFront": "ccb_side",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 14,
+    "customModelName": "Grass block",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -17,7 +17,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crystal Leaves",
+    "name": "Crystal Cutting Bench",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -45,14 +45,14 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 0,
-    "useLootTableForDrops": true,
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "LEAVES"
+      "value": "WOOD"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -72,7 +72,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "SWEET_BERRY_BUSH"
+      "value": "WOOD"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -101,9 +101,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "CrystalLeavesBlockDestroyedByPlayer"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

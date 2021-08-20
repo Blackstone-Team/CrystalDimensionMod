@@ -216,6 +216,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "crystal_leaves"
+    },
+    {
+      "name": "CrystalBowRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_bow_recipe"
+    },
+    {
+      "name": "CrystalCuttingBench",
+      "type": "block",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_cutting_bench"
     }
   ],
   "variable_elements": [],
@@ -227,6 +245,7 @@
       "item.crystal_dimension.iron_string": "Iron String",
       "item.crystal_dimension.crystal_shards": "Crystal Shards",
       "item.crystal_dimension.long_crystal_shard": "Long Crystal Shard",
+      "block.crystal_dimension.crystal_cutting_bench": "Crystal Cutting Bench",
       "item.crystal_dimension.crystal_bow": "Crystal Bow",
       "item.crystal_dimension.crystal_berry": "Crystal Berry",
       "block.crystal_dimension.crystal": "Crystal",
