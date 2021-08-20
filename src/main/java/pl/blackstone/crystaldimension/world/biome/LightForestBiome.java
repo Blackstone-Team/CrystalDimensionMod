@@ -4,6 +4,8 @@ package pl.blackstone.crystaldimension.world.biome;
 import pl.blackstone.crystaldimension.particle.LightParticleParticle;
 import pl.blackstone.crystaldimension.entity.CrystalBeastEntity;
 import pl.blackstone.crystaldimension.block.LightGrassBlock;
+import pl.blackstone.crystaldimension.block.CrystalLogBlock;
+import pl.blackstone.crystaldimension.block.CrystalLeavesBlock;
 import pl.blackstone.crystaldimension.CrystalDimensionModElements;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -51,18 +53,17 @@ public class LightForestBiome extends CrystalDimensionModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(12638463).setWaterColor(4159204).setWaterFogColor(329011)
 						.withSkyColor(7972607).withFoliageColor(-16724839).withGrassColor(-16724788)
-						.setParticle(new ParticleEffectAmbience(LightParticleParticle.particle, 0.005f)).build();
+						.setParticle(new ParticleEffectAmbience(LightParticleParticle.particle, 0.003f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(LightGrassBlock.block.getDefaultState(),
 								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
-				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						Feature.TREE
-								.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
-										new SimpleBlockStateProvider(Blocks.OAK_LEAVES.getDefaultState()),
-										new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
-										new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build())
-								.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-								.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.TREE
+						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(CrystalLogBlock.block.getDefaultState()),
+								new SimpleBlockStateProvider(CrystalLeavesBlock.block.getDefaultState()),
+								new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
+								new StraightTrunkPlacer(5, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().setMaxWaterDepth(0).build())
+						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
 								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 1))));

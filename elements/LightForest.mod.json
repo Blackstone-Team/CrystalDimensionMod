@@ -34,7 +34,7 @@
     "particleToSpawn": {
       "value": "CUSTOM:LightParticle"
     },
-    "particlesProbability": 0.5,
+    "particlesProbability": 0.30000000000000004,
     "biomeCategory": "FOREST",
     "parent": {
       "value": "No parent"
@@ -58,14 +58,14 @@
     "cactiPerChunk": 0,
     "treesPerChunk": 4,
     "vanillaTreeType": "Default",
-    "treeType": 0,
-    "minHeight": 7,
+    "treeType": 1,
+    "minHeight": 5,
     "maxWaterDepth": 0,
     "treeStem": {
-      "value": ""
+      "value": "CUSTOM:CrystalLog"
     },
     "treeBranch": {
-      "value": ""
+      "value": "CUSTOM:CrystalLeaves"
     },
     "treeVines": {
       "value": ""

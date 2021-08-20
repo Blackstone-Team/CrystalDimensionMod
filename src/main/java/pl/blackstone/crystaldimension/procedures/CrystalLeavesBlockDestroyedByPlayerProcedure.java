@@ -46,6 +46,7 @@ public class CrystalLeavesBlockDestroyedByPlayerProcedure extends CrystalDimensi
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(CrystalBerryItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
+				entityToSpawn.setNoDespawn();
 				world.addEntity(entityToSpawn);
 			}
 		}

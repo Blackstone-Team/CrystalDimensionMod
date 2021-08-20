@@ -11,7 +11,7 @@
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -52,7 +52,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "ROCK"
+      "value": "WOOD"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -72,9 +72,9 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "WOOD"
     },
-    "luminance": 0,
+    "luminance": 3,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
@@ -103,11 +103,7 @@
     "fluidRestrictions": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      }
-    ],
+    "blocksToReplace": [],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
