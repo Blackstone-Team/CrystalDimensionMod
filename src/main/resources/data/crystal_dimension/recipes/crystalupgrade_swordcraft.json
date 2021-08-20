@@ -1,0 +1,24 @@
+{
+  "group": "crystal_dimension",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "crystal_dimension:long_crystal_shard"
+    },
+    "1": {
+      "item": "crystal_dimension:crystal_sword"
+    },
+    "2": {
+      "item": "crystal_dimension:long_crystal_shard"
+    }
+  },
+  "result": {
+    "item": "crystal_dimension:crystalupgrade_sword",
+    "count": 1
+  }
+}
