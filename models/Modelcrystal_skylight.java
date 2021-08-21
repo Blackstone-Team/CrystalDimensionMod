@@ -42,7 +42,7 @@ public static class Modelcrystal_skylight extends EntityModel<Entity> {
 
 	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity e) {
 		super.setRotationAngles(f, f1, f2, f3, f4, f5, e);
-		this.right_wing.rotateAngleY = f2;
-		this.left_wing.rotateAngleY = f2;
+		this.right_wing.rotateAngleZ = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+		this.left_wing.rotateAngleZ = MathHelper.cos(f * 0.6662F) * f1;
 	}
 }

@@ -8,6 +8,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -24,7 +25,7 @@ public class SkylightRenderer {
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(SkylightEntity.entity, renderManager -> {
-				return new MobRenderer(renderManager, new Modelcrystal_skylight(), 0.4f) {
+				return new MobRenderer(renderManager, new Modelcrystal_skylight(), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("crystal_dimension:textures/crystal_skylight.png");
@@ -72,8 +73,8 @@ public class SkylightRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
-			this.right_wing.rotateAngleY = f2;
-			this.left_wing.rotateAngleY = f2;
+			this.right_wing.rotateAngleZ = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+			this.left_wing.rotateAngleZ = MathHelper.cos(f * 0.6662F) * f1;
 		}
 	}
 }

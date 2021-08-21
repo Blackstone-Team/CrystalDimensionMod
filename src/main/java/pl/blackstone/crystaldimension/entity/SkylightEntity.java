@@ -1,7 +1,6 @@
 
 package pl.blackstone.crystaldimension.entity;
 
-import pl.blackstone.crystaldimension.itemgroup.CdTabItemGroup;
 import pl.blackstone.crystaldimension.entity.renderer.SkylightRenderer;
 import pl.blackstone.crystaldimension.CrystalDimensionModElements;
 
@@ -18,18 +17,18 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -39,14 +38,15 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockState;
+
+import java.util.Random;
 
 @CrystalDimensionModElements.ModElement.Tag
 public class SkylightEntity extends CrystalDimensionModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.4f, 0.4f)).build("skylight").setRegistryName("skylight");
+			.size(0.6f, 1.8f)).build("skylight").setRegistryName("skylight");
 	public SkylightEntity(CrystalDimensionModElements instance) {
 		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SkylightRenderer.ModelRegisterHandler());
@@ -57,20 +57,19 @@ public class SkylightEntity extends CrystalDimensionModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -6710887, -6684775, new Item.Properties().group(CdTabItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -6710887, -3342439, new Item.Properties().group(ItemGroup.MISC))
 				.setRegistryName("skylight_spawn_egg"));
 	}
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(entity, 20, 2, 4));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos,
-						random) -> (world.getBlockState(pos.down()).getMaterial() == Material.ORGANIC && world.getLightSubtracted(pos, 0) > 8));
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
+				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -106,11 +105,18 @@ public class SkylightEntity extends CrystalDimensionModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
-			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(5, new SwimGoal(this));
+			this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.8, 20) {
+				@Override
+				protected Vector3d getPosition() {
+					Random random = CustomEntity.this.getRNG();
+					double dir_x = CustomEntity.this.getPosX() + ((random.nextFloat() * 2 - 1) * 16);
+					double dir_y = CustomEntity.this.getPosY() + ((random.nextFloat() * 2 - 1) * 16);
+					double dir_z = CustomEntity.this.getPosZ() + ((random.nextFloat() * 2 - 1) * 16);
+					return new Vector3d(dir_x, dir_y, dir_z);
+				}
+			});
+			this.goalSelector.addGoal(2, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(3, new SwimGoal(this));
 		}
 
 		@Override

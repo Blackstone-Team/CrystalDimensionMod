@@ -46,7 +46,7 @@
       "value": ""
     },
     "dropAmount": 0,
-    "useLootTableForDrops": true,
+    "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,

@@ -12,6 +12,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.FluidState;
@@ -24,7 +26,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
+import java.util.Collections;
 
 @CrystalDimensionModElements.ModElement.Tag
 public class CrystalLeavesBlock extends CrystalDimensionModElements.ModElement {
@@ -50,6 +54,14 @@ public class CrystalLeavesBlock extends CrystalDimensionModElements.ModElement {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.SWEET_BERRY_BUSH).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0)
 					.notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("crystal_leaves");
+		}
+
+		@Override
+		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+			if (!dropsOriginal.isEmpty())
+				return dropsOriginal;
+			return Collections.singletonList(new ItemStack(this, 0));
 		}
 
 		@Override
