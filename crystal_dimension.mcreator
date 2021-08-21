@@ -251,7 +251,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "crystalupgrade_sword"
+      "registry_name": "crystal_upgraded_sword"
     },
     {
       "name": "CrysataliceSwordLivingEntityIsHitWithTool",
@@ -352,13 +352,13 @@
       "registry_name": "crystaliceswordcraft_2"
     },
     {
-      "name": "CrystalSkylight",
+      "name": "Skylight",
       "type": "mob",
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "crystal_skylight"
+      "registry_name": "skylight"
     }
   ],
   "variable_elements": [],
@@ -369,19 +369,19 @@
       "item.crystal_dimension.crystal_beast_spawn_egg": "Crystal Beast Spawn Egg",
       "item.crystal_dimension.iron_string": "Iron String",
       "item.crystal_dimension.longice_crystal": "Longice Crystal",
+      "item.crystal_dimension.skylight_spawn_egg": "Skylight Spawn Egg",
       "item.crystal_dimension.crystal_shards": "Crystal Shards",
       "item.crystal_dimension.crystal_sword": "Crystal Sword",
+      "item.crystal_dimension.crystal_upgraded_sword": "Crystalupgrade Sword",
       "item.crystal_dimension.long_crystal_shard": "Long Crystal Shard",
+      "entity.crystal_dimension.skylight": "Skylight",
       "block.crystal_dimension.crystal_cutting_bench": "Crystal Cutting Bench",
-      "item.crystal_dimension.crystalupgrade_sword": "Crystalupgrade Sword",
       "item.crystal_dimension.ice_crystal": "Ice Crystal",
       "item.crystal_dimension.crystal_bow": "Crystal Bow",
-      "item.crystal_dimension.crysatalice_sword": "Crysatalice Sword",
-      "entity.crystal_dimension.crystal_skylight": "Crystal Skylight",
+      "item.crystal_dimension.crysatalice_sword": "Crysatal Iced Sword",
       "item.crystal_dimension.crystal_berry": "Crystal Berry",
       "block.crystal_dimension.crystal": "Crystal",
       "block.crystal_dimension.crystal_block": "Crystal Block",
-      "item.crystal_dimension.crystal_skylight_spawn_egg": "Crystal Skylight Spawn Egg",
       "item.crystal_dimension.berry": "Berry",
       "itemGroup.tabcd_tab": "Crystal Dimension",
       "block.crystal_dimension.crystal_log": "Crystal Log",

@@ -38,7 +38,7 @@ public class CrysataliceSwordItem extends CrystalDimensionModElements.ModElement
 			}
 
 			public float getAttackDamage() {
-				return 3f;
+				return 5f;
 			}
 
 			public int getHarvestLevel() {
@@ -52,7 +52,7 @@ public class CrysataliceSwordItem extends CrystalDimensionModElements.ModElement
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.4f, new Item.Properties().group(CdTabItemGroup.tab)) {
+		}, 3, -2.6f, new Item.Properties().group(CdTabItemGroup.tab)) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

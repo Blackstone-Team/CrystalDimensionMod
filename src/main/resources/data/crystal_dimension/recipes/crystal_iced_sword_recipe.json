@@ -8,17 +8,17 @@
   ],
   "key": {
     "0": {
-      "item": "crystal_dimension:long_crystal_shard"
+      "item": "crystal_dimension:longice_crystal"
     },
     "1": {
       "item": "crystal_dimension:crystal_sword"
     },
     "2": {
-      "item": "crystal_dimension:long_crystal_shard"
+      "item": "crystal_dimension:longice_crystal"
     }
   },
   "result": {
-    "item": "crystal_dimension:crystal_upgraded_sword",
+    "item": "crystal_dimension:crysatalice_sword",
     "count": 1
   }
 }

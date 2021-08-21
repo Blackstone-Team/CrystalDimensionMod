@@ -2,23 +2,19 @@
   "group": "crystal_dimension",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "  2",
-    " 4 ",
-    "6  "
+    "0",
+    "1"
   ],
   "key": {
-    "2": {
+    "0": {
       "item": "crystal_dimension:long_crystal_shard"
     },
-    "4": {
-      "item": "crystal_dimension:crystal_shards"
-    },
-    "6": {
-      "item": "minecraft:stick"
+    "1": {
+      "item": "minecraft:ice"
     }
   },
   "result": {
-    "item": "crystal_dimension:crystal_sword",
+    "item": "crystal_dimension:longice_crystal",
     "count": 1
   }
 }

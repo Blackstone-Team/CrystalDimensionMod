@@ -14,7 +14,7 @@ import net.minecraft.item.IItemTier;
 
 @CrystalDimensionModElements.ModElement.Tag
 public class CrystalupgradeSwordItem extends CrystalDimensionModElements.ModElement {
-	@ObjectHolder("crystal_dimension:crystalupgrade_sword")
+	@ObjectHolder("crystal_dimension:crystal_upgraded_sword")
 	public static final Item block = null;
 	public CrystalupgradeSwordItem(CrystalDimensionModElements instance) {
 		super(instance, 19);
@@ -32,7 +32,7 @@ public class CrystalupgradeSwordItem extends CrystalDimensionModElements.ModElem
 			}
 
 			public float getAttackDamage() {
-				return 3f;
+				return 4f;
 			}
 
 			public int getHarvestLevel() {
@@ -47,6 +47,6 @@ public class CrystalupgradeSwordItem extends CrystalDimensionModElements.ModElem
 				return Ingredient.fromStacks(new ItemStack(LongCrystalShardItem.block, (int) (1)));
 			}
 		}, 3, -2.4f, new Item.Properties().group(CdTabItemGroup.tab)) {
-		}.setRegistryName("crystalupgrade_sword"));
+		}.setRegistryName("crystal_upgraded_sword"));
 	}
 }

@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "crystal_ice_sword",
     "customModelName": "Normal",
-    "name": "Crysatalice Sword",
+    "name": "Crysatal Iced Sword",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:CdTab"
@@ -13,9 +13,9 @@
     "toolType": "Sword",
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 1.6,
+    "attackSpeed": 1.4,
     "enchantability": 2,
-    "damageVsEntity": 5.0,
+    "damageVsEntity": 7.0,
     "usageCount": 100,
     "blocksAffected": [],
     "hasGlow": false,
