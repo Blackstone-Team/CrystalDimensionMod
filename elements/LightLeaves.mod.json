@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "crystal_leaves",
+    "texture": "lightleaves",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crystal Leaves",
+    "name": "Light Leaves",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -45,12 +45,12 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 1,
     "material": {
       "value": "LEAVES"
     },

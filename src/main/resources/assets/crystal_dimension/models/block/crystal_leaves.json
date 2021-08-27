@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-    "down": "crystal_dimension:blocks/crystal_fruit_leaves",
-    "up": "crystal_dimension:blocks/crystal_leaves",
-    "north": "crystal_dimension:blocks/crystal_fruit_leaves",
-    "east": "crystal_dimension:blocks/crystal_fruit_leaves",
-    "south": "crystal_dimension:blocks/crystal_fruit_leaves",
-    "west": "crystal_dimension:blocks/crystal_fruit_leaves",
-    "particle": "crystal_dimension:blocks/crystal_fruit_leaves"
+    "all": "crystal_dimension:blocks/crystal_leaves",
+    "particle": "crystal_dimension:blocks/crystal_leaves"
   }
 }

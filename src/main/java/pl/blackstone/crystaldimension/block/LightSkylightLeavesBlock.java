@@ -1,6 +1,7 @@
 
 package pl.blackstone.crystaldimension.block;
 
+import pl.blackstone.crystaldimension.procedures.LightSkylightLeavesBlockDestroyedByPlayerProcedure;
 import pl.blackstone.crystaldimension.itemgroup.CdTabItemGroup;
 import pl.blackstone.crystaldimension.CrystalDimensionModElements;
 
@@ -9,10 +10,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
@@ -20,15 +25,17 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 @CrystalDimensionModElements.ModElement.Tag
-public class CrystalCuttingBenchBlock extends CrystalDimensionModElements.ModElement {
-	@ObjectHolder("crystal_dimension:crystal_cutting_bench")
+public class LightSkylightLeavesBlock extends CrystalDimensionModElements.ModElement {
+	@ObjectHolder("crystal_dimension:light_skylight_leaves")
 	public static final Block block = null;
-	public CrystalCuttingBenchBlock(CrystalDimensionModElements instance) {
-		super(instance, 17);
+	public LightSkylightLeavesBlock(CrystalDimensionModElements instance) {
+		super(instance, 33);
 	}
 
 	@Override
@@ -44,8 +51,9 @@ public class CrystalCuttingBenchBlock extends CrystalDimensionModElements.ModEle
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
-			setRegistryName("crystal_cutting_bench");
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.CROP).hardnessAndResistance(0.8999999999999999f, 10f).setLightLevel(s -> 0)
+					.notSolid().setOpaque((bs, br, bp) -> false));
+			setRegistryName("light_skylight_leaves");
 		}
 
 		@Override
@@ -53,7 +61,24 @@ public class CrystalCuttingBenchBlock extends CrystalDimensionModElements.ModEle
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(this, 0));
+		}
+
+		@Override
+		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				LightSkylightLeavesBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 	}
 }

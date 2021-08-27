@@ -1,5 +1,5 @@
 {
-  "parent": "crystal_dimension:block/crystal_log",
+  "parent": "crystal_dimension:block/crystal_berries_leaves",
   "display": {
     "thirdperson": {
       "rotation": [

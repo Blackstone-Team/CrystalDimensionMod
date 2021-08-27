@@ -1,14 +1,15 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="crystal_dimension"
 version="1.0.0"
 displayName="Crystal Dimension"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="Andus, Jasiekoo"
 displayURL="https://mcreator.net"
-authors="Andus"
+logoFile="logo.png"
+authors="Blackstone"
 
 [[dependencies.crystal_dimension]]
     modId="minecraft"

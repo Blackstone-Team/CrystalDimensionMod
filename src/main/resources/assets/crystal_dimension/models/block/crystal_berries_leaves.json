@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "crystal_dimension:blocks/crystal_fruit_leaves",
+    "particle": "crystal_dimension:blocks/crystal_fruit_leaves"
+  }
+}

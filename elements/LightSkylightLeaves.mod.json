@@ -2,14 +2,14 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "ccb_down",
-    "textureTop": "ccb_top",
-    "textureLeft": "ccb_side",
-    "textureFront": "ccb_side",
+    "texture": "lightskylightleaves",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 14,
-    "customModelName": "Grass block",
+    "renderType": 11,
+    "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -17,7 +17,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
@@ -32,9 +32,9 @@
         "subtract": false
       }
     ],
-    "name": "Crystal Cutting Bench",
+    "name": "Light Skylight Leaves",
     "specialInfo": [],
-    "hardness": 1.0,
+    "hardness": 0.8999999999999999,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -45,14 +45,14 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "WOOD"
+      "value": "LEAVES"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -72,7 +72,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "CROP"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -101,6 +101,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "LightSkylightLeavesBlockDestroyedByPlayer"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

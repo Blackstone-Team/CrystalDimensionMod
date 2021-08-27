@@ -12,30 +12,30 @@ import net.minecraft.entity.item.ItemEntity;
 import java.util.Map;
 
 @CrystalDimensionModElements.ModElement.Tag
-public class CrystalLeavesBlockDestroyedByPlayerProcedure extends CrystalDimensionModElements.ModElement {
-	public CrystalLeavesBlockDestroyedByPlayerProcedure(CrystalDimensionModElements instance) {
-		super(instance, 15);
+public class CrystalBerriesLeavesBlockDestroyedByPlayerProcedure extends CrystalDimensionModElements.ModElement {
+	public CrystalBerriesLeavesBlockDestroyedByPlayerProcedure(CrystalDimensionModElements instance) {
+		super(instance, 34);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				CrystalDimensionMod.LOGGER.warn("Failed to load dependency x for procedure CrystalLeavesBlockDestroyedByPlayer!");
+				CrystalDimensionMod.LOGGER.warn("Failed to load dependency x for procedure CrystalBerriesLeavesBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				CrystalDimensionMod.LOGGER.warn("Failed to load dependency y for procedure CrystalLeavesBlockDestroyedByPlayer!");
+				CrystalDimensionMod.LOGGER.warn("Failed to load dependency y for procedure CrystalBerriesLeavesBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				CrystalDimensionMod.LOGGER.warn("Failed to load dependency z for procedure CrystalLeavesBlockDestroyedByPlayer!");
+				CrystalDimensionMod.LOGGER.warn("Failed to load dependency z for procedure CrystalBerriesLeavesBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				CrystalDimensionMod.LOGGER.warn("Failed to load dependency world for procedure CrystalLeavesBlockDestroyedByPlayer!");
+				CrystalDimensionMod.LOGGER.warn("Failed to load dependency world for procedure CrystalBerriesLeavesBlockDestroyedByPlayer!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -45,7 +45,7 @@ public class CrystalLeavesBlockDestroyedByPlayerProcedure extends CrystalDimensi
 		if ((Math.random() == 0.5)) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(CrystalBerryItem.block, (int) (1)));
-				entityToSpawn.setPickupDelay((int) 10);
+				entityToSpawn.setPickupDelay((int) 0);
 				entityToSpawn.setNoDespawn();
 				world.addEntity(entityToSpawn);
 			}

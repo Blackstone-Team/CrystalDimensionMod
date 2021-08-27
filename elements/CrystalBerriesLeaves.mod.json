@@ -2,24 +2,24 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "crystallog_down",
-    "textureTop": "crystallog_top",
-    "textureLeft": "crystallog",
-    "textureFront": "crystallog",
-    "textureRight": "crystallog",
-    "textureBack": "crystallog",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "texture": "crystal_fruit_leaves",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 110,
+    "customModelName": "Single texture",
     "rotationMode": 0,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
+    "tintType": "Foliage",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crystal Log",
+    "name": "Crystal Berries Leaves",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -45,14 +45,14 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "WOOD"
+      "value": "LEAVES"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -72,9 +72,9 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "SWEET_BERRY_BUSH"
     },
-    "luminance": 3,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
@@ -101,9 +101,16 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "CrystalBerriesLeavesBlockDestroyedByPlayer"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE"
+      }
+    ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,

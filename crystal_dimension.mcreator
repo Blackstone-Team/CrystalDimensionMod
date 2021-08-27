@@ -136,15 +136,6 @@
       "registry_name": "crystal_bow"
     },
     {
-      "name": "CrystalLog",
-      "type": "block",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_log"
-    },
-    {
       "name": "Berry",
       "type": "food",
       "sortid": 13,
@@ -180,44 +171,6 @@
       "registry_name": "crystal_berry"
     },
     {
-      "name": "CrystalLeavesBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_leaves_block_destroyed_by_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CrystalLeaves",
-      "type": "block",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_leaves"
-    },
-    {
       "name": "CrystalBowRecipe",
       "type": "recipe",
       "sortid": 16,
@@ -225,15 +178,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "crystal_bow_recipe"
-    },
-    {
-      "name": "CrystalCuttingBench",
-      "type": "block",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_cutting_bench"
     },
     {
       "name": "CrystalSword",
@@ -359,6 +303,118 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "skylight"
+    },
+    {
+      "name": "LightLeaves",
+      "type": "block",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_leaves"
+    },
+    {
+      "name": "CrystalLeaves",
+      "type": "block",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_leaves"
+    },
+    {
+      "name": "CrystalizedSpear",
+      "type": "gun",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystalized_spear"
+    },
+    {
+      "name": "LightSkylightLeaves",
+      "type": "block",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_skylight_leaves"
+    },
+    {
+      "name": "CrystalBerriesLeavesBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_berries_leaves_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrystalBerriesLeaves",
+      "type": "block",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_berries_leaves"
+    },
+    {
+      "name": "LightSkylightLeavesBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_skylight_leaves_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrystalFields",
+      "type": "biome",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crystal_fields"
     }
   ],
   "variable_elements": [],
@@ -366,28 +422,31 @@
   "language_map": {
     "en_us": {
       "block.crystal_dimension.crystal_leaves": "Crystal Leaves",
-      "item.crystal_dimension.crystal_beast_spawn_egg": "Crystal Beast Spawn Egg",
       "item.crystal_dimension.iron_string": "Iron String",
-      "item.crystal_dimension.longice_crystal": "Longice Crystal",
+      "item.crystal_dimension.crystal_beast_spawn_egg": "Crystal Beast Spawn Egg",
       "item.crystal_dimension.skylight_spawn_egg": "Skylight Spawn Egg",
-      "item.crystal_dimension.crystal_shards": "Crystal Shards",
       "item.crystal_dimension.crystal_sword": "Crystal Sword",
-      "item.crystal_dimension.crystal_upgraded_sword": "Crystalupgrade Sword",
-      "item.crystal_dimension.long_crystal_shard": "Long Crystal Shard",
+      "item.crystal_dimension.crystal_shards": "Crystal Shards",
       "entity.crystal_dimension.skylight": "Skylight",
-      "block.crystal_dimension.crystal_cutting_bench": "Crystal Cutting Bench",
+      "item.crystal_dimension.crysatalice_sword": "Crysatal Iced Sword",
+      "block.crystal_dimension.crystal": "Crystal",
+      "biome.crystal_dimension.crystal_fields": "Crystal Fields",
+      "item.crystal_dimension.crystalized_spear": "Crystalized Spear",
+      "itemGroup.tabcd_tab": "Crystal Dimension",
+      "entity.crystal_dimension.crystal_beast": "Crystal Beast",
+      "item.crystal_dimension.longice_crystal": "Longice Crystal",
+      "item.crystal_dimension.crystal_upgraded_sword": "Crystalupgrade Sword",
+      "block.crystal_dimension.crystal_berries_leaves": "Crystal Berries Leaves",
+      "item.crystal_dimension.long_crystal_shard": "Long Crystal Shard",
+      "block.crystal_dimension.light_leaves": "Light Leaves",
       "item.crystal_dimension.ice_crystal": "Ice Crystal",
       "item.crystal_dimension.crystal_bow": "Crystal Bow",
-      "item.crystal_dimension.crysatalice_sword": "Crysatal Iced Sword",
       "item.crystal_dimension.crystal_berry": "Crystal Berry",
-      "block.crystal_dimension.crystal": "Crystal",
       "block.crystal_dimension.crystal_block": "Crystal Block",
       "item.crystal_dimension.berry": "Berry",
-      "itemGroup.tabcd_tab": "Crystal Dimension",
-      "block.crystal_dimension.crystal_log": "Crystal Log",
-      "block.crystal_dimension.light_grass": "Light Grass",
+      "block.crystal_dimension.light_skylight_leaves": "Light Skylight Leaves",
       "biome.crystal_dimension.light_forest": "Light Forest",
-      "entity.crystal_dimension.crystal_beast": "Crystal Beast"
+      "block.crystal_dimension.light_grass": "Light Grass"
     }
   },
   "foldersRoot": {
@@ -398,17 +457,18 @@
     "modid": "crystal_dimension",
     "modName": "Crystal Dimension",
     "version": "1.0.0",
-    "author": "Andus",
+    "author": "Blackstone",
     "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "skylight_logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Andus, Jasiekoo",
     "modElementsPackage": "pl.blackstone.crystaldimension",
     "lockBaseModFiles": false
   },

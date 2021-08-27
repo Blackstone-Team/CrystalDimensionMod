@@ -1,5 +1,5 @@
 {
-  "parent": "crystal_dimension:block/crystal_cutting_bench",
+  "parent": "crystal_dimension:block/light_skylight_leaves",
   "display": {
     "thirdperson": {
       "rotation": [

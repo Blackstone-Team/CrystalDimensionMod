@@ -1,6 +1,7 @@
 
 package pl.blackstone.crystaldimension.entity;
 
+import pl.blackstone.crystaldimension.itemgroup.CdTabItemGroup;
 import pl.blackstone.crystaldimension.entity.renderer.SkylightRenderer;
 import pl.blackstone.crystaldimension.CrystalDimensionModElements;
 
@@ -24,7 +25,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -57,7 +57,7 @@ public class SkylightEntity extends CrystalDimensionModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -6710887, -3342439, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -6710887, -3342439, new Item.Properties().group(CdTabItemGroup.tab))
 				.setRegistryName("skylight_spawn_egg"));
 	}
 

@@ -46,16 +46,16 @@ public class SkylightRenderer {
 			textureWidth = 16;
 			textureHeight = 16;
 			left_wing = new ModelRenderer(this);
-			left_wing.setRotationPoint(-1.0F, 0.0F, 0.0F);
+			left_wing.setRotationPoint(0.0F, 0.0F, 0.0F);
 			setRotationAngle(left_wing, 0.0F, 0.0F, 0.1745F);
-			left_wing.setTextureOffset(0, 3).addBox(1.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F, false);
+			left_wing.setTextureOffset(0, 3).addBox(0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F, false);
 			right_wing = new ModelRenderer(this);
-			right_wing.setRotationPoint(0.0F, 0.0F, 0.0F);
+			right_wing.setRotationPoint(-1.0F, 0.0F, 0.0F);
 			setRotationAngle(right_wing, 0.0F, 0.0F, -0.1745F);
-			right_wing.setTextureOffset(3, 0).addBox(-2.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F, false);
+			right_wing.setTextureOffset(3, 0).addBox(-1.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F, false);
 			body = new ModelRenderer(this);
-			body.setRotationPoint(0.0F, 24.0F, 0.0F);
-			body.setTextureOffset(0, 0).addBox(-1.0F, -24.0F, 0.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+			body.setRotationPoint(-0.5F, 0.5F, 1.0F);
+			body.setTextureOffset(0, 0).addBox(-0.5F, -0.5F, -1.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
 		}
 
 		@Override
